@@ -171,8 +171,8 @@ def mutual_information(image1, image2, id0, bin_size=1):
 
 def registration(image):
     reference, template = prepare_image(image)
-    save(reference, 'ref.png')
-    save(template, 'temp.png')
+    save(reference, '../output/ref.png')
+    save(template, '../output/temp.png')
     results = []
     for i in range(41):
         overlappingregion = overlap(reference, template, i)
@@ -182,7 +182,7 @@ def registration(image):
 
 test = load('../input/test3.jpeg')
 
-'''
+
 #Gaussian Noise Addition
 row,col,ch= test.shape
 mean = 0
@@ -191,8 +191,8 @@ sigma = var**0.5
 gauss = np.random.normal(mean,sigma,(row,col,ch))
 gauss = gauss.reshape(row,col,ch)
 noisy = test + gauss - 1
-save(noisy, 'gauss_noise3.png')
-''' 
+save(noisy, '../output/gauss_noise3.png')
+ 
 # comment out the above block to obtain experimental results
 
 values = registration(noisy)
@@ -201,7 +201,7 @@ print(np.min(values), np.argmin(values))
 plt.plot(values)
 plt.xlabel("Shift in X Direction")
 plt.ylabel("Mutual Information")
-plt.savefig("../output/mi_plot4_bin_255.png")
+plt.savefig("../output/mi_plot1_bin3.png")
 plt.clf()
 '''
 Image 1 Results: 

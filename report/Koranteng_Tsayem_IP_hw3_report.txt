@@ -1,0 +1,22 @@
+Implementation
+
+We used the equation specified in the homework writeup.
+
+Self-Chosen Images
+test1.jpg:
+This image is a bunch of red roses.
+We used bin-size 1 for this image. The mutual information score was highest at x=40.
+The output is in the mi_plot1.png file.
+
+test2.jpg:
+This image is a bunch of blueberries.
+We used bin-size 1 for this image. The mutual information score was highest at x=40.
+The output is in the mi_plot2.png file.
+
+test3.jpeg:
+This image is a green plant.
+We used bin-size 1 for this image. The mutual information score was highest at x=0.
+The output is in the mi_plot3.png file.
+
+We used bin-sizes 3, 51 and 255 for this image. 
+The mutual score is highest at 0 and the graphs all look the same around 40.
